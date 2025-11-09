@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Classifier (ResNet18)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col items-center justify-center min-h-screen">
+  <div class="bg-white p-6 rounded-2xl shadow-xl w-96 text-center">
+    <h1 class="text-2xl font-bold mb-4">ResNet18 Image Classifier</h1>
+    <form id="uploadForm">
+      <input type="file" id="fileInput" accept="image/*" class="mb-4 w-full border p-2 rounded" required>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded w-full">Классифицировать</button>
+    </form>
+    <div id="result" class="mt-6 text-left"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
