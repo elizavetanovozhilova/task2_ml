@@ -5,10 +5,14 @@
 ### Запуск images_api
 
 ```bash
+cd image_api
+```
+
+```bash
 uvicorn app:app --reload
 ```
 
-### Запуск тестов для images_api
+### Запуск тестов для image_api
 
 ```bash
 pytest -v

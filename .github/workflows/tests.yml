@@ -1,4 +1,4 @@
-name: Run API Tests
+name: Image API tests
 
 on:
   push:
@@ -9,6 +9,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    # Все команды run выполняем внутри папки image_api
+    defaults:
+      run:
+        working-directory: ./image_api
 
     steps:
       - name: Checkout repository
