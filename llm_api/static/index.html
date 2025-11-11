@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM & Agent API (Ollama)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col items-center justify-center min-h-screen">
+  <div class="bg-white p-6 rounded-2xl shadow-xl w-full max-w-2xl space-y-8">
+
+    <section>
+      <h1 class="text-2xl font-bold mb-4 text-center">LLM Chat (Ollama)</h1>
+
+      <label class="block mb-2 font-semibold">LLM-запрос:</label>
+      <textarea id="promptInput" rows="3" class="w-full p-2 border rounded-md mb-4" placeholder="Например: Объясни квантовую запутанность простыми словами"></textarea>
+
+      <label class="block mb-2 font-semibold">Модель:</label>
+      <select id="modelSelect" class="w-full p-2 border rounded-md mb-4">
+        <option value="qwen2.5:1.5b">qwen2.5:1.5b</option>
+        <option value="mistral">mistral</option>
+        <option value="phi3">phi3</option>
+      </select>
+
+      <button id="sendBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded w-full">Отправить в LLM</button>
+
+      <div id="result" class="mt-4 whitespace-pre-wrap bg-gray-50 p-3 rounded-lg border text-sm"></div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2 class="text-xl font-bold mb-4 text-center">Агент ИТ-поддержки</h2>
+
+      <label class="block mb-2 font-semibold">Опиши свою проблему:</label>
+      <textarea id="agentPrompt" rows="3" class="w-full p-2 border rounded-md mb-4" placeholder="Например: У меня не подключается Wi-Fi на ноутбуке."></textarea>
+
+      <label class="block mb-2 font-semibold">Модель агента:</label>
+      <select id="agentModel" class="w-full p-2 border rounded-md mb-4">
+        <option value="qwen2.5:1.5b">qwen2.5:1.5b</option>
+        <option value="mistral">mistral</option>
+        <option value="phi3">phi3</option>
+      </select>
+
+      <button id="agentBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded w-full">Спросить агента</button>
+
+      <div id="agentResult" class="mt-4 whitespace-pre-wrap bg-gray-50 p-3 rounded-lg border text-sm"></div>
+    </section>
+
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
